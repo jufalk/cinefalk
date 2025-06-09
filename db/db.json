@@ -1,0 +1,152 @@
+{
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "Interestelar: Uma Nova Jornada",
+      "descricao": "Filme explora viagens interplanetárias em busca da sobrevivência humana.",
+      "conteudo": "Interestelar, dirigido por Christopher Nolan, é uma obra-prima da ficção científica que aborda temas como viagens interestelares, teoria da relatividade e amor transcendente. O enredo acompanha um grupo de astronautas que viajam através de um buraco de minhoca em busca de um novo lar para a humanidade.",
+      "categoria": "Ficção Científica",
+      "autor": "Equipe CineNews",
+      "destaque": true,
+      "data": "2025-04-20",
+      "imagem_principal": "assets/img/interestelar.jpg",
+      "imagens_complementares": [
+        {
+          "id": 1,
+          "src": "assets/img/interestelar1.jpg",
+          "descricao": "Cena no planeta de gelo"
+        },
+        {
+          "id": 2,
+          "src": "assets/img/interestelar2.jpg",
+          "descricao": "Nave Endurance viajando pelo espaço"
+        },
+        {
+          "id": 3,
+          "src": "assets/img/interestelar3.jpg",
+          "descricao": "Protagonistas em missão no planeta aquático"
+        }
+      ]
+    },
+    {
+      "titulo": "Novo Filme Espacial",
+      "descricao": "Filme aborda exploração intergaláctica.",
+      "categoria": "Ficção Científica",
+      "autor": "Equipe CineNews",
+      "data": "2025-05-15",
+      "id": 3
+    },
+    {
+      "titulo": "Novo Filme Espacial",
+      "descricao": "Filme aborda exploração intergaláctica.",
+      "categoria": "Ficção Científica",
+      "autor": "Equipe CineNews",
+      "data": "2025-05-15",
+      "id": 4
+    },
+    {
+      "titulo": "Novo Filme Espacial",
+      "descricao": "Filme aborda exploração intergaláctica.",
+      "categoria": "Ficção Científica",
+      "autor": "Equipe CineNews",
+      "data": "2025-05-15",
+      "id": 5
+    },
+    {
+      "titulo": "Novo Filme Espacial",
+      "descricao": "Filme aborda exploração intergaláctica.",
+      "categoria": "Ficção Científica",
+      "autor": "Equipe CineNews",
+      "data": "2025-05-15",
+      "id": 6
+    },
+    {
+      "titulo": "Novo Filme Espacial",
+      "descricao": "Filme aborda exploração intergaláctica.",
+      "categoria": "Ficção Científica",
+      "autor": "Equipe CineNews",
+      "data": "2025-05-15",
+      "id": 7
+    },
+    {
+      "titulo": "Novo Filme Espacial",
+      "descricao": "Filme aborda exploração intergaláctica.",
+      "categoria": "Ficção Científica",
+      "autor": "Equipe CineNews",
+      "data": "2025-05-15",
+      "id": 8
+    },
+    {
+      "titulo": "Novo Filme Espacial",
+      "descricao": "Filme aborda exploração intergaláctica.",
+      "categoria": "Ficção Científica",
+      "autor": "Equipe CineNews",
+      "data": "2025-05-15",
+      "id": 9
+    },
+    {
+      "titulo": "Novo Filme Espacial",
+      "descricao": "Filme aborda exploração intergaláctica.",
+      "categoria": "Ficção Científica",
+      "autor": "Equipe CineNews",
+      "data": "2025-05-15",
+      "id": 10
+    },
+    {
+      "titulo": "Novo Filme Espacial",
+      "descricao": "Filme aborda exploração intergaláctica.",
+      "categoria": "Ficção Científica",
+      "autor": "Equipe CineNews",
+      "data": "2025-05-15",
+      "id": 11
+    },
+    {
+      "titulo": "Novo Filme Espacial",
+      "descricao": "Filme aborda exploração intergaláctica.",
+      "categoria": "Ficção Científica",
+      "autor": "Equipe CineNews",
+      "data": "2025-05-15",
+      "id": 12
+    },
+    {
+      "titulo": "Novo Filme Espacial",
+      "descricao": "Filme aborda exploração intergaláctica.",
+      "categoria": "Ficção Científica",
+      "autor": "Equipe CineNews",
+      "data": "2025-05-15",
+      "id": 13
+    },
+    {
+      "titulo": "Novo Filme Espacial",
+      "descricao": "Filme aborda exploração intergaláctica.",
+      "categoria": "Ficção Científica",
+      "autor": "Equipe CineNews",
+      "data": "2025-05-15",
+      "id": 14
+    },
+    {
+      "titulo": "Novo Filme Espacial",
+      "descricao": "Filme aborda exploração intergaláctica.",
+      "categoria": "Ficção Científica",
+      "autor": "Equipe CineNews",
+      "data": "2025-05-15",
+      "id": 15
+    },
+    {
+      "titulo": "Novo Filme Espacial",
+      "descricao": "Filme aborda exploração intergaláctica.",
+      "categoria": "Ficção Científica",
+      "autor": "Equipe CineNews",
+      "data": "2025-05-15",
+      "id": 16
+    },
+    {
+      "titulo": "Novo Filme Espacial",
+      "descricao": "Filme aborda exploração intergaláctica.",
+      "categoria": "Ficção Científica",
+      "autor": "Equipe CineNews",
+      "data": "2025-05-15",
+      "id": 17
+    }
+  ]
+}

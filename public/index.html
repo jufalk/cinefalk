@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalogo de Filmes</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+</head>
+<body>
+  
+  <header class="bg-light p-3">
+    <a href="index.html">
+      <h1>Cinemalk</h1>
+    </a>
+  </header>
+
+  <section class="container my-4">
+    <h2>Itens em Destaque</h2>
+    <div id="carouselDestaques" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" id="destaques-carousel-container"></div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestaques" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselDestaques" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="container my-4">
+    <h2>Todos os Itens</h2>
+    <div class="row" id="lista-itens">
+    </div>
+  </section>
+
+  <section class="container my-4">
+    <h2>Locais de Gravação</h2>
+    <div id="map" style="height: 500px;"></div>
+  </section>
+    <form id="formulario">
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" name="titulo" required>
+
+    <label for="descricao">Descrição:</label>
+    <input type="text" id="descricao" name="descricao" required>
+
+    <label for="categoria">Categoria:</label>
+    <input type="text" id="categoria" name="categoria" required>
+
+    <label for="autor">Autor:</label>
+    <input type="text" id="autor" name="autor" required>
+
+    <button type="submit">Cadastrar Notícia</button>
+</form>
+
+  <footer class="footer-custom text-white py-4 mt-5">
+    <div class="container text-center">
+      <h4 class="footer-logo mb-3">Julia Falk Prado Bonifacio de Menezes Soares Dias</h4>
+      <p class="mb-1">Curso: <strong>Sistemas de Informação</strong> | Disciplina: <strong>Desenvolvimento Web</strong></p>
+      <div class="social-links mt-3">
+        <a href="https://www.linkedin.com/in/xuxafalk" target="_blank" class="me-3 text-white">
+          <img src="assets/img/linkedin.png" alt="" width="30px">
+        </a>
+        <a href="https://github.com/xuxafalk" target="_blank" class="text-white">
+          <img src="assets/img/GitHub-logo.png" alt="" width="30px">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoieHVmYWxrIiwiYSI6ImNtYmd4cXhwdDA0NW0ybXBzZGtsMnViaDQifQ.4qatGByNw0pok1U_QL9QmA';
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
+
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: {
+        version: 8,
+        sources: {
+          'raster-tiles': {
+            type: 'raster',
+            tiles: [
+              'https://api.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}@2x.jpg90?access_token=' + mapboxgl.accessToken
+            ],
+            tileSize: 512,
+            attribution: '© <a href="https://www.mapbox.com/">Mapbox</a> © <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
+          }
+        },
+        layers: [
+          {
+            id: 'raster-layer',
+            type: 'raster',
+            source: 'raster-tiles',
+            minzoom: 0,
+            maxzoom: 22
+          }
+        ]
+      },
+      center: [-43.9352, -19.9208], 
+      zoom: 2
+    });
+
+   
+    fetch(`C:\Users\julia\OneDrive\Desktop\julia\db\db.json`)
+      .then(response => response.json())
+      .then(filme => {
+        if (filme.coordenadas && filme.coordenadas.length === 2) {
+          const marker = new mapboxgl.Marker()
+            .setLngLat(filme.coordenadas)
+            .setPopup(
+              new mapboxgl.Popup({ offset: 25 }).setHTML(
+                `<h5>${filme.titulo}</h5><p>${filme.descricao}</p>`
+              )
+            )
+            .addTo(map);
+
+          map.setCenter(filme.coordenadas);
+          map.setZoom(5);
+        } else {
+          console.error("Coordenadas inválidas para o filme.");
+        }
+      })
+      .catch(error => {
+        console.error("Erro ao carregar filme:", error);
+      });
+  </script>
+</body>
+</html>
