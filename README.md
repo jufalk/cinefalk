@@ -5,10 +5,17 @@ Nesta atividade, você irá completar o projeto anterior permitindo cadastrar e 
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Julia Falk Prado Bonifacio de Menezes Soares Dias
+- Matricula: 00889362
+- Proposta de projeto escolhida: Catalogo de Filmes
+- Breve descrição sobre seu projeto: Funcionalidades implementadas
+
+- Listagem de notícias
+- Criação de notícias (POST)
+- Edição de notícias (PATCH)
+- Exclusão de notícias (DELETE)
+- Uso do JSON Server como backend simulado
+- Consumo com `fetch` para todas as operações CRUD
 
 **Print do testes da API com Postman ou similar**
 
@@ -22,7 +29,7 @@ Nesta atividade, você irá completar o projeto anterior permitindo cadastrar e 
 
 **Print da aba NETWORK com requisições Fetch/XHR de POST**
 
-<<  COLOQUE A IMAGEM AQUI >>
+<<  COLOQUE A IMAGEM AQUI >>![alt text](image.png)
 
 ## **Orientações Gerais**
 
